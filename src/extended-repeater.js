@@ -16,7 +16,7 @@ const { NotImplementedError } = require('../lib');
  *
  */
 
-function repeater(str, ortions) {
+function repeater(str, options) {
   str = String(str);
 
   const repeatTimes = options.repeatTimes || 1;
