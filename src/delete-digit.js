@@ -11,9 +11,14 @@ const { NotImplementedError } = require('../lib');
  * For n = 152, the output should be 52
  *
  */
-function deleteDigit(/* n */) {
-  // Remove line below and write your code here
-  throw new NotImplementedError('Not implemented');
+function deleteDigit(n) {
+  let s = n.toString();
+  let max = -Infinity;
+  for (let i = 0; i < s.length; i += 1) {
+    let candidat = +(s.slice(0, i) + s.slice(i + 1));
+    if (candidat > max) max = candidat;
+  }
+  return max;
 }
 
 module.exports = {
